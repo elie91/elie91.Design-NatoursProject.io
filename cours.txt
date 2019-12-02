@@ -1,0 +1,72 @@
+********** Animations ***************
+
+backface-visibility: hidden => résout le prb du texte qui remonte à la fin d'une anim
+
+animation-name: moveInLeft;                   
+animation-duration: 3s;               === animation: moveInLeft 1s ease-out;
+animation-timing-function: ease-out;
+
+animation-iteration-count: 3; => répéter une anim
+animation-delay: 3s;    => ajouter un délai 
+
+
+On peut soit utiliser les keyframes pour des anim complexes
+Soit utiliser transition pour les petites anims
+On peut mettre  transition: all .2s; sur le state initial (elem parent) pour que 
+toutes les autres propriétés prennent cette transition
+
+
+*********** BEM ********************
+Méthodologie pour structurer efficacement le HTML
+On réfléchit en terme de composants
+ *  Un block html ne pouvant exister seul (sans son parent) aura une classe 
+    débutant par __classeParent
+ *   Un élement à l'intérieur d'un composant venant uniquement modifier son 
+    comportement aura une classe avec --classeModifier
+ *  Un block pouvant exister seul et être réutiliser aura uniqument sa propre classe
+
+
+********** Position ******************
+1 - position: absolute; (le parent doit etre en relatif)
+    top: px;
+    left: px;
+
+2 - transform: translate(-50%, -50%); (s'applique sur l'elem lui meme)
+3 - text-align: center (sur le parent, si on veut centrer du texte)
+
+
+
+********** Pseudo classes **********
+:link       =>  permet de sélectionner les liens à l'intérieur d'élément
+:visited    =>  modifier l'aspect d'un lien après que l'utilisateur l'a visité
+:active     => cibler un élément lorsque celui-ci est activé par l'utilisateur
+
+
+******** Pseudo éléments ***********
+
+mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle
+::after => crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné
+
+
+******** Responsive ****************
+
+Privilégier l'utilisation de rem 
+Car, cela nous permet en changeant uniquement la taille du font-size root,
+de s'adapter aux écrans et de rendre les font du site responsives, puisque 
+rem se calcule en fonction de la taille du root element
+
+Ds le cours, il place le root font size dans le tag html
+Bad pratice de le set en px, car on override le default browser font size settings
+C'est donc mieux de le set en %, en sachant que par défaut, le font size est 16px
+Donc, on set le font size a 62.5% === 10 px
+Donc 1rem = 10px
+
+
+
+************ divers ***************
+
+margin: 0 auto => centrer un block à l'intérieur d'un autre block
+max-width: utilise la largeur spécifié, et si le viewport devient trop petit, prend 100% de l'espace
+
+[attribut] => sélectionne des eléments par attributs
+on peut ajouter ^, * OU $ comme les regex
