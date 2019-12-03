@@ -1,8 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: gray;
   margin: 0 auto;
-  color: black;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -12,7 +10,6 @@
 
   //select all elements with attribut class started with col-
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
