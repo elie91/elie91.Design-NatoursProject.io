@@ -26,6 +26,9 @@ On réfléchit en terme de composants
  *  Un block pouvant exister seul et être réutiliser aura uniqument sa propre classe
 
 
+*********** Images *****************
+Priviliégier l'utilisation des % pour les images, pour le responsive
+
 ********** Position ******************
 1 - position: absolute; (le parent doit etre en relatif)
     top: px;
