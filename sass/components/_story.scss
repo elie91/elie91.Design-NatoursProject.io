@@ -1,39 +1,66 @@
 .story {
-	width: 75%;
-	margin: 0 auto;
-	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-	background-color: $color-white;
-	border-radius: 3px;
-	padding: 6rem;
-	padding-left: 9rem;
-	font-size: $default-font-size;
-	transform: skewX(-12deg);
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
 
-	&__shape {
-		width: 15rem;
-		height: 15rem;
-		float: left;
-		
-		//make the image in circle
-		-webkit-clip-path:  circle(50% at 50% 50%);
-		clip-path:  circle(50% at 50% 50%);
+  &__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    float: left;
 
-		//make the text align with the circle
-		//shape only work if element is floated
-		-webkit-shape-outside: circle(50% at 50% 50%);
-		shape-outside: circle(50% at 50% 50%);
+    //make the image in circle
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
 
-		//with float, use tranlate to ade space
-		transform: translateX(-3rem) skewX(12deg);
+    //make the text align with the circle
+    //shape only work if element is floated
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
 
-	}
+    //with float, use tranlate to ade space
+    transform: translateX(-3rem) skewX(12deg);
+  }
 
-	&__img {
-		//100% du height de l'element parent, shape qui a une height de 15rem
-		height: 100%;
-	}
+  &__img {
+    //100% du height de l'element parent, shape qui a une height de 15rem
+	height: 100%;
+	transform: translateX(-4rem) scale(1.4);
+	backface-visibility: hidden;
+	transition: all .5s;
+  }
 
-	&__text {
-		transform: skewX(12deg);
-	}
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 1.7rem;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+	transition: all 0.2s;
+	backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+	transform: translateX(-4rem) scale(1);
+	filter: blur(3px) brightness(80%);
+  }
 }

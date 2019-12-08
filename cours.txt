@@ -31,13 +31,14 @@ On réfléchit en terme de composants
 *********** Images *****************
 Priviliégier l'utilisation des % pour les images, pour le responsive
 
-********** Position ******************
-1 - position: absolute; (le parent doit etre en relatif)
-    top: px;
-    left: px;
 
-2 - transform: translate(-50%, -50%); (s'applique sur l'elem lui meme)
-3 - text-align: center (sur le parent, si on veut centrer du texte)
+********** Position ******************
+Pour centrer un element en absolute 
+Le parent doit etre en relative
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 
 
 
