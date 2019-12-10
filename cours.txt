@@ -52,6 +52,7 @@ Le parent doit etre en relative
 
 mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle
 ::after => crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné
+            Spécifier obligatoirement content, display, height, et width
 
 
 ******** Responsive ****************
