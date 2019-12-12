@@ -40,6 +40,8 @@ Le parent doit etre en relative
    left: 50%;
    transform: translate(-50%, -50%);
 
+position: fixed =>   same as absolute, but stay fixed in his position
+
 
 
 ********** Pseudo classes **********
