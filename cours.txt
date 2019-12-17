@@ -42,6 +42,11 @@ Le parent doit etre en relative
 
 position: fixed =>   same as absolute, but stay fixed in his position
 
+Pour mettre deux éléments cote à cote dans un container
+parent : display:table
+enfant: display: table-cell
+         vertical-align: middle;
+
 
 
 ********** Pseudo classes **********
