@@ -1,13 +1,12 @@
 ********** Animations ***************
 
-backface-visibility: hidden => résout le prb du texte qui remonte à la fin d'une anim
+backface-visibility: hidden 
+   => résout le prb du texte qui remonte à la fin d'une anim
 
-animation-name: moveInLeft;                   
-animation-duration: 3s;               === animation: moveInLeft 1s ease-out;
-animation-timing-function: ease-out;
-
-animation-iteration-count: 3; => répéter une anim
-animation-delay: 3s;    => ajouter un délai 
+animation-iteration-count: 3; 
+   => répéter une anim
+animation-delay: 3s;    
+   => ajouter un délai 
 
 
 On peut soit utiliser les keyframes pour des anim complexes
@@ -15,7 +14,11 @@ Soit utiliser transition pour les petites anims
 On peut mettre  transition: all .2s; sur le state initial (elem parent) pour que 
 toutes les autres propriétés prennent cette transition
 
-Rotations => Ajout de perspective sur l'élément parent
+Rotations 
+   => Ajout de perspective sur l'élément parent
+
+display:none 
+   => ne permet pas d'animer l'élément, utiliser plutot opacity:0, visibility:hidden
 
 
 *********** BEM ********************
@@ -33,14 +36,17 @@ Priviliégier l'utilisation des % pour les images, pour le responsive
 
 
 ********** Position ******************
-Pour centrer un element en absolute 
-Le parent doit etre en relative
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+Pour centrer un block dans un autre bloc 
+ => Le parent doit etre en relative
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-position: fixed =>   same as absolute, but stay fixed in his position
+
+
+position: fixed 
+   =>   same as absolute, but stay fixed in his position
 
 Pour mettre deux éléments cote à cote dans un container
 parent : display:table
@@ -50,9 +56,14 @@ enfant: display: table-cell
 
 
 ********** Pseudo classes **********
-:link       =>  permet de sélectionner les liens à l'intérieur d'élément
-:visited    =>  modifier l'aspect d'un lien après que l'utilisateur l'a visité
-:active     => cibler un élément lorsque celui-ci est activé par l'utilisateur
+:link       
+   =>  permet de sélectionner les liens à l'intérieur d'élément
+:visited    
+   =>  modifier l'aspect d'un lien après que l'utilisateur l'a visité
+:active     
+   => cibler un élément lorsque celui-ci est activé par l'utilisateur
+:target
+   => S'applique lorsque l'élement est ciblé, exemple avec un anchor tag
 
 
 ******** Pseudo éléments ***********
@@ -62,25 +73,12 @@ mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines partie
             Spécifier obligatoirement content, display, height, et width
 
 
-******** Responsive ****************
-
-Privilégier l'utilisation de rem 
-Car, cela nous permet en changeant uniquement la taille du font-size root,
-de s'adapter aux écrans et de rendre les font du site responsives, puisque 
-rem se calcule en fonction de la taille du root element
-
-Ds le cours, il place le root font size dans le tag html
-Bad pratice de le set en px, car on override le default browser font size settings
-C'est donc mieux de le set en %, en sachant que par défaut, le font size est 16px
-Donc, on set le font size a 62.5% === 10 px
-Donc 1rem = 10px
-
-
-
 ************ divers ***************
 
-margin: 0 auto => centrer un block à l'intérieur d'un autre block
-max-width: utilise la largeur spécifié, et si le viewport devient trop petit, prend 100% de l'espace
-
-[attribut] => sélectionne des eléments par attributs
+margin: 0 auto 
+   => centrer un block à l'intérieur d'un autre block
+max-width:
+ => utilise la largeur spécifié, et si le viewport devient trop petit, prend 100% de l'espace
+[attribut] 
+   => sélectionne des eléments par attributs
 on peut ajouter ^, * OU $ comme les regex
