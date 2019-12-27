@@ -85,8 +85,13 @@ On réfléchit en terme de composants
    * 1200 à 1800 = DESKTOP
    * 1800 et + = BIG DESKTOP
 
-   Avec l'approche Desktop first, on doit utiliser les media query avec des max-width
-   Avec l'approche Mobile first, on doit utiliser les media query avec des min-width
+   Desktop first 
+      => media query avec max-width
+      => On commence par la plus haute valeur et on decrease
+
+   Mobile first
+      => media query avec min-width
+      => On commence par la plus petite valeur et on augmente
 
    Les breakpoints se place dans le fichier mixin.scss, dans notre mixin media query manager
    On utilise le @content dans chaque media-query pour injecter le code css qui sera placé 
@@ -97,6 +102,12 @@ On réfléchit en terme de composants
    Définir les breakpoints des media query en em , et non en px
    Car si le user change la taille de police par défaut de son navigateur et que l'on a défini nos media query en px,
    celle ci ne seront pas appliqué
+
+   ORDER: 
+		Base + typography
+		general layout + grid
+		page layout
+		components
 
 
 ************ divers ***************
