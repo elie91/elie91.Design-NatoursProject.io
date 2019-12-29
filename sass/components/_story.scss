@@ -2,12 +2,22 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-  background-color: rgba($color-white, .6);
+  background-color: rgba($color-white, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     position: relative;
@@ -26,18 +36,26 @@
 
     //with float, use tranlate to ade space
     transform: translateX(-3rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
     //100% du height de l'element parent, shape qui a une height de 15rem
-	height: 100%;
-	transform: translateX(-4rem) scale(1.4);
-	backface-visibility: hidden;
-	transition: all .5s;
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+	transition: all 0.5s;
   }
 
   &__text {
-    transform: skewX(12deg);
+	transform: skewX(12deg);
+	
+	@include respond(phone) {
+		transform: skewX(0);
+	}
   }
 
   &__caption {
@@ -50,8 +68,8 @@
     text-transform: uppercase;
     text-align: center;
     opacity: 0;
-	transition: all 0.2s;
-	backface-visibility: hidden;
+    transition: all 0.2s;
+    backface-visibility: hidden;
   }
 
   &:hover &__caption {
@@ -60,7 +78,7 @@
   }
 
   &:hover &__img {
-	transform: translateX(-4rem) scale(1);
-	filter: blur(3px) brightness(80%);
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }
