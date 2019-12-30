@@ -33,6 +33,10 @@ On réfléchit en terme de composants
 
 *********** Images *****************
    Priviliégier l'utilisation des % pour les images, pour le responsive
+   When to use responsive images:
+      1 - Resolution switching (large screen > small screen)
+      2 - Density switching (@2x screen > @1px screen)
+      3 - Art direction (Different images on different screens size)
 
 
 ********** Position ******************

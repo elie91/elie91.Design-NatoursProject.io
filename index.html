@@ -383,7 +383,13 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <!--  Art direction -->
+                <!-- si width < 37.5, source sera utilisé, sinon img -->
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)"> 
+                <!-- Density switching -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -444,59 +450,6 @@
     </div>
 
 
-    <!--     <section class="grid-test">
-        
-        <div class="row">
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div> 
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-2-of-3">
-                Col 2 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-2-of-4">
-                Col 2 of 4
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-3-of-4">
-                Col 3 of 4
-            </div>
-        </div>
-    </section> -->
 </body>
 
 </html>

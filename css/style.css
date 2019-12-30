@@ -608,11 +608,21 @@ body {
   .popup__left {
     width: 33.3333333%;
     display: table-cell; }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        display: flex;
+        flex: 50%;
+        width: 50%; } }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        display: block;
+        width: 100%;
+        text-align: center; } }
   .popup__img {
     display: block;
     width: 100%; }
