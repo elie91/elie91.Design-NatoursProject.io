@@ -639,6 +639,9 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        column-gap: 2rem; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }

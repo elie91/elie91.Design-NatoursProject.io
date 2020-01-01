@@ -69,6 +69,9 @@
         column-count: 2;
         //Espace entre les deux colonnes
         column-gap: 4rem;
+        @include respond(phone) {
+            column-gap: 2rem;
+        }
         //Border entre les deux colonnes
         column-rule: 1px solid $color-grey-light-2;
         //Coupe un mot en deux en ajoutant un - s'il dépasse la largeur
