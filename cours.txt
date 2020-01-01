@@ -82,6 +82,7 @@
 ******** Resolution *********** 
    192dpi = Résolution du apple retina, habituellement utilisé comme référence
 
+
 ******** Responsive ***********
 
    * Placer toujours les media queries à la fin, car aucune spécificité n'est ajouté
@@ -114,6 +115,10 @@
 		general layout + grid
 		page layout
 		components
+
+
+******** Support *********** 
+   @support() : conditions si le navigateur supporte le css écrit dans le @support
 
 
 ************ divers ***************
