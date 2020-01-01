@@ -1,34 +1,34 @@
 ********** Animations ***************
 
-backface-visibility: hidden 
-   => résout le prb du texte qui remonte à la fin d'une anim
+   backface-visibility: hidden 
+      => résout le prb du texte qui remonte à la fin d'une anim
 
-animation-iteration-count: 3; 
-   => répéter une anim
-animation-delay: 3s;    
-   => ajouter un délai 
+   animation-iteration-count: 3; 
+      => répéter une anim
+   animation-delay: 3s;    
+      => ajouter un délai 
 
 
-On peut soit utiliser les keyframes pour des anim complexes
-Soit utiliser transition pour les petites anims
-On peut mettre  transition: all .2s; sur le state initial (elem parent) pour que 
-toutes les autres propriétés prennent cette transition
+   On peut soit utiliser les keyframes pour des anim complexes
+   Soit utiliser transition pour les petites anims
+   On peut mettre  transition: all .2s; sur le state initial (elem parent) pour que 
+   toutes les autres propriétés prennent cette transition
 
-Rotations 
-   => Ajout de perspective sur l'élément parent
+   Rotations 
+      => Ajout de perspective sur l'élément parent
 
-display:none 
-   => ne permet pas d'animer l'élément, utiliser plutot opacity:0, visibility:hidden
+   display:none 
+      => ne permet pas d'animer l'élément, utiliser plutot opacity:0, visibility:hidden
 
 
 *********** BEM ********************
-Méthodologie pour structurer efficacement le HTML
-On réfléchit en terme de composants
- *  Un block html ne pouvant exister seul (sans son parent) aura une classe 
-    débutant par __classeParent
- *   Un élement à l'intérieur d'un composant venant uniquement modifier son 
-    comportement aura une classe avec --classeModifier
- *  Un block pouvant exister seul et être réutiliser aura uniqument sa propre classe
+   Méthodologie pour structurer efficacement le HTML
+   On réfléchit en terme de composants
+   *  Un block html ne pouvant exister seul (sans son parent) aura une classe 
+      débutant par __classeParent
+   *   Un élement à l'intérieur d'un composant venant uniquement modifier son 
+      comportement aura une classe avec --classeModifier
+   *  Un block pouvant exister seul et être réutiliser aura uniqument sa propre classe
 
 
 *********** Images *****************
@@ -79,7 +79,9 @@ On réfléchit en terme de composants
    ::before 
 
 
-            
+******** Resolution *********** 
+   192dpi = Résolution du apple retina, habituellement utilisé comme référence
+
 ******** Responsive ***********
 
    * Placer toujours les media queries à la fin, car aucune spécificité n'est ajouté
