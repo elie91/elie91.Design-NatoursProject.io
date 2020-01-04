@@ -103,36 +103,39 @@
 ******** Responsive ***********
 
    * Placer toujours les media queries à la fin, car aucune spécificité n'est ajouté
+
    * 0 à 600 px = PHONE 
    * 600 à 900 = TABLET PORTRAIT
    * 900 à 1200 = TABLET LANDSCAPE
    * 1200 à 1800 = DESKTOP
    * 1800 et + = BIG DESKTOP
 
-   Desktop first 
+   * Desktop first 
       => media query avec max-width
       => On commence par la plus haute valeur et on decrease
 
-   Mobile first
+   * Mobile first
       => media query avec min-width
       => On commence par la plus petite valeur et on augmente
 
-   Les breakpoints se place dans le fichier mixin.scss, dans notre mixin media query manager
-   On utilise le @content dans chaque media-query pour injecter le code css qui sera placé 
-   par les autres fichiers dans le contenu de la mixin
-   Cela permet d'avoir un seul endroit ou nos breakpoints sont définis, ce qui permet de les modifier 
-   beaucoup plus rapidement si nécéssaire
+   *  Les breakpoints se place dans le fichier mixin.scss, dans notre mixin media query manager
+      On utilise le @content dans chaque media-query pour injecter le code css qui sera placé 
+      par les autres fichiers dans le contenu de la mixin
+      Cela permet d'avoir un seul endroit ou nos breakpoints sont définis, ce qui permet de les modifier 
+      beaucoup plus rapidement si nécéssaire
 
-   Définir les breakpoints des media query en em , et non en px
-   Car si le user change la taille de police par défaut de son navigateur et que l'on a défini nos media query en px,
-   celle ci ne seront pas appliqué
+   *  Définir les breakpoints des media query en em , et non en px
+      Car si le user change la taille de police par défaut de son navigateur et que l'on a défini nos media query en px,
+      celle ci ne seront pas appliqué
 
-   ORDER: 
-		Base + typography
-		general layout + grid
-		page layout
-		components
+   * ORDER: 
+		   Base + typography
+		   general layout + grid
+		   page layout
+		   components
 
+   *  Pour cibler les touch devices, la width ne suffit pas (car ipad par ex sont tres larges)
+      On peut utiliser (hover:none). 
 
 ******** Support *********** 
    @support() : conditions si le navigateur supporte le css écrit dans le @support
